@@ -5,7 +5,7 @@ public class Game {
     private int secretNumber;
 
     Game() {
-        this.secretNumber = new Random().nextInt(10);
+        this.secretNumber = new Random().nextInt(100);
     }
 
     public String checkGuess(int guess) {

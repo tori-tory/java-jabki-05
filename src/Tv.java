@@ -27,7 +27,7 @@ public class Tv {
     }
 
     public void setVolume(int value) {
-        if (value >= 0 && value <= 10) {
+        if (value >= 0 && value <= 100) {
             this.volume = value;
         }
     }
