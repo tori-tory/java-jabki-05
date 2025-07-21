@@ -1,13 +1,18 @@
-import java.math.BigDecimal;
-
 public class Wallet {
+    /**
+     * 1) Класс «Кошелек»:
+     * Поля: owner (private), money (private).
+     * Конструктор с параметрами owner, money.
+     * Геттеры и сеттеры с валидацией: money не может быть отрицательным.
+     * Метод spend(int amount), уменьшающий money.
+     */
 
     private String owner;
     private int money;
 
-    Wallet(String name, int amount) {
-        this.owner = name;
-        this.money = amount;
+    public Wallet(String name, int amount) {
+        setOwner(name);
+        setMoney(amount);
     }
 
     public String getOwner() {
@@ -19,6 +24,9 @@ public class Wallet {
     }
 
     public void setOwner(String name) {
+        if (name.trim().equals("")) {
+            throw new IllegalArgumentException("Укажите Владельца кошелька");
+        }
         this.owner = name;
     }
 

@@ -1,15 +1,23 @@
 public class Tv {
+    /**
+     * 3) Класс «Телевизор»:
+     * Поля: currentChannel (private), volume (private).
+     * Геттеры и сеттеры:
+     * volume может быть от 0 до 100.
+     * currentChannel от 1 до 50.
+     * Метод nextChannel() увеличивает канал на 1
+     */
 
     private int currentChannel;
     private int volume;
 
-    Tv() {
+    public Tv() {
         this.currentChannel = 1;
     }
 
-    Tv(int channel, int volume) {
-        this.currentChannel = channel;
-        this.volume = volume;
+    public Tv(int channel, int volume) {
+            setCurrentChannel(channel);
+            setVolume(volume);
     }
 
     public int getCurrentChannel() {

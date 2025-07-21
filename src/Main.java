@@ -1,13 +1,11 @@
-import org.junit.jupiter.api.Assertions;
-
 public class Main {
     public static void main(String[] args) {
         System.out.println("Домашняя работа №5");
 
         Game game = new Game();
-        int someNumber  = 5;
-        while (game.checkGuess(someNumber) != "Угадал") {
-            if (game.checkGuess(someNumber) == "Больше") {
+        int someNumber  = 50;
+        while (!(game.checkGuess(someNumber).equals("Угадал"))) {
+            if (game.checkGuess(someNumber).equals("Больше")) {
                 someNumber++;
             } else {
                 someNumber--;
@@ -20,5 +18,7 @@ public class Main {
         order.addItem("Ложка", 50);
         order.addItem("Нож", 60);
         System.out.println(order.getOrderInfo());
+
+        Wallet wallet = new Wallet(" ",100);
     }
 }

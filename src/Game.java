@@ -1,10 +1,15 @@
 import java.util.Random;
 
 public class Game {
+    /**
+     * 2) Игра «Угадай число»:
+     * Создайте класс Game с полем secretNumber (private, случайное число от 1 до 100).
+     * Добавьте метод checkGuess(int guess), возвращающий "Больше", "Меньше" или "Угадал"
+     */
 
-    private int secretNumber;
+    private final int secretNumber;
 
-    Game() {
+    public Game() {
         this.secretNumber = new Random().nextInt(100);
     }
 
@@ -13,9 +18,7 @@ public class Game {
             return "Меньше";
         } else if (guess < this.secretNumber) {
             return "Больше";
-        } else {
-            return "Угадал";
         }
-
-        }
+        return "Угадал";
+    }
 }
